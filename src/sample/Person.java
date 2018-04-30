@@ -55,33 +55,33 @@ public class Person {
     }
 
     //Set new name
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String newName) {
+        this.name = newName;
     }
 
     //Set new image
-    public void setImage(String image) {
-        this.image = image;
+    public void setImage(String newImage) {
+        this.image = newImage;
     }
 
     //Set new status
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatus(String newStatus) {
+        this.status = newStatus;
     }
 
     //Set new gender
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGender(String newGender) {
+        this.gender = newGender;
     }
 
     //Set new age
-    public void setAge(String age) {
-        this.age = age;
+    public void setAge(String newAge) {
+        this.age = newAge;
     }
 
     //Set new age
-    public void setState(String state) {
-        this.state = state;
+    public void setState(String newState) {
+        this.state = newState;
     }
 
     public String toString() {

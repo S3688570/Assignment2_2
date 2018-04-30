@@ -39,6 +39,12 @@ public class Driver {
                 //Add a person to the network
                 case 1:
                     AddProfiles array = new AddProfiles();
+                    array.addName();
+                    array.addImage();
+                    array.addStatus();
+                    array.addGender();
+                    array.addAge();
+                    array.addState();
                     array.addProfile();
                     menuOpt.displayMenu();
                     break;
