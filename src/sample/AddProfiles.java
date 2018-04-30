@@ -23,35 +23,67 @@ public class AddProfiles extends Array {
     }
 
     //Add person's name
-    public void addName() throws MyExceptions{
-        System.out.println("Enter the person's name: ");
-        CheckStringInput inputString = new CheckStringInput();
-        inputString.addString();
-        newName = newString;
+    public void addName() throws MyExceptions {
+        boolean error = false;
+        do {
+            System.out.println("Enter the person's name: ");
+            String newName = input.nextLine();
+            if (!newName.matches("[a-zA-Z ]+")) {
+                error = true;
+                newString = newName;
+                throw new MyExceptions("Error message", newString);
+            } else {
+                error = false;
+            }
+        } while (error == true);
     }
 
     //Add profile image
-    public void addImage() throws MyExceptions{
-        System.out.println("Enter the profile image name: ");
-        CheckStringInput inputString2 = new CheckStringInput();
-        inputString2.addString();
-        newImage = newString;
+    public void addImage() throws MyExceptions {
+        boolean error = false;
+        do {
+            System.out.println("Enter the profile image name: ");
+            String newImage = input.nextLine();
+            if (!newImage.matches("[a-zA-Z ]+")) {
+                error = true;
+                newString = newImage;
+                throw new MyExceptions("Error message", newString);
+            } else {
+                error = false;
+            }
+        } while (error == true);
     }
 
     //Input the person's status
-    public void addStatus() throws MyExceptions{
-        System.out.println("Enter the person's status: ");
-        CheckStringInput inputString3 = new CheckStringInput();
-        inputString3.addString();
-        newStatus = newString;
+    public void addStatus() throws MyExceptions {
+        boolean error = false;
+        do {
+            System.out.println("Enter the person's status: ");
+            String newStatus = input.nextLine();
+            if (!newStatus.matches("[a-zA-Z ]+")) {
+                error = true;
+                newString = newStatus;
+                throw new MyExceptions("Error message", newString);
+            } else {
+                error = false;
+            }
+        } while (error == true);
     }
 
     //Input the person's gender
-    public void addGender() throws MyExceptions{
-        System.out.println("Enter the person's gender (M or F): ");
-        CheckStringInput inputString4 = new CheckStringInput();
-        inputString4.addString();
-        newGender = newString;
+    public void addGender() throws MyExceptions {
+        boolean error = false;
+        do {
+            System.out.println("Enter the person's gender: ");
+            String newGender = input.nextLine();
+            if (!newGender.matches("[a-zA-Z ]+")) {
+                error = true;
+                newString = newGender;
+                throw new MyExceptions("Error message", newString);
+            } else {
+                error = false;
+            }
+        } while (error == true);
     }
 
     //Input the person's age
@@ -75,11 +107,19 @@ public class AddProfiles extends Array {
     }
 
     //Input the person's state of residence
-    public void addState() throws MyExceptions{
-        System.out.println("Enter the person's state of residence (e.g. VIC): ");
-        CheckStringInput inputString5 = new CheckStringInput();
-        inputString5.addString();
-        newState = newString;
+    public void addState() throws MyExceptions {
+        boolean error = false;
+        do {
+            System.out.println("Enter the person's residence (e.g. VIC): ");
+            String newState = input.nextLine();
+            if (!newState.matches("[a-zA-Z ]+")) {
+                error = true;
+                newString = newState;
+                throw new MyExceptions("Error message", newString);
+            } else {
+                error = false;
+            }
+        } while (error == true);
     }
 
     public String getNewName() {

@@ -6,9 +6,9 @@ public class MyExceptions extends Exception {
         //TODO Auto-generate constructor stub
     }
 
-    public MyExceptions(String err1Msg, String newName) {
-        super(err1Msg);
-        System.out.println("Woops " + newName + " is not a name!! Please try again: ");
+    public MyExceptions(String errMsg, String newString) {
+        super(errMsg);
+        System.out.println("Woops " + newString + " is not correct!! Please try again: ");
     }
 
    public MyExceptions(String errMsg, int newAge) {
