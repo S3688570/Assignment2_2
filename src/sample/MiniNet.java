@@ -42,6 +42,11 @@ public class MiniNet extends Application {
         array.loadArray();
         array.printArray();
 
+        LoadRelationships relationships = new LoadRelationships();
+        relationships.loadRelations();
+        relationships.printRelationships();
+
+
         Driver menu = new Driver();
         menu.displayMenu();
     }
