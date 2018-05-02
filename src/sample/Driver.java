@@ -65,14 +65,11 @@ public class Driver {
 
                 //Connect two people as friends
                 case 4:
-     /*               //Retrieve and check ages of friends
+                    //Retrieve and check ages of friends and make friends if OK
                     SetFriends setFriends = new SetFriends();
                     setFriends.checkAges();
-
-                    //Set two people as friends
-                    setFriends.addFriend();
                     menuOpt.displayMenu();
-                    break; */
+                    break;
 
                     //Are two people friends?
                 case 5:
@@ -80,7 +77,7 @@ public class Driver {
                     twoFriends.areFriendsFirstPerson();
                     twoFriends.areFriendsSecondPerson();
                     menuOpt.displayMenu();
-                    break; 
+                    break;
 
                     //Find out the name(s) of a person's child(ren)
                 case 6:
