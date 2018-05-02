@@ -51,10 +51,10 @@ public class Driver {
 
                 //Select a person by name and print profile
                 case 2:
-             /*       SearchProfiles search = new SearchProfiles();
+                    SearchProfiles search = new SearchProfiles();
                     search.searchName();
                     menuOpt.displayMenu();
-                    break;  */
+                    break;
 
                     //Output all profiles
                 case 3:
@@ -76,11 +76,11 @@ public class Driver {
 
                     //Are two people friends?
                 case 5:
-      /*              TwoFriends twoFriends = new TwoFriends();
+                    TwoFriends twoFriends = new TwoFriends();
                     twoFriends.areFriendsFirstPerson();
                     twoFriends.areFriendsSecondPerson();
                     menuOpt.displayMenu();
-                    break; */
+                    break; 
 
                     //Find out the name(s) of a person's child(ren)
                 case 6:
