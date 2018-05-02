@@ -51,10 +51,10 @@ public class Driver {
 
                 //Select a person by name and print profile
                 case 2:
-     /*               SearchProfiles search = new SearchProfiles();
+             /*       SearchProfiles search = new SearchProfiles();
                     search.searchName();
                     menuOpt.displayMenu();
-                    break; */
+                    break;  */
 
                     //Output all profiles
                 case 3:

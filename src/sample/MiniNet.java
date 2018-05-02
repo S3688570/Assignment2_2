@@ -34,7 +34,7 @@ public class MiniNet extends Application {
     }
 
 
-    public static void main(String[] args) throws MyExceptions {
+    public static void main(String[] args) throws Exception {
         launch(args);
 
 
@@ -45,6 +45,9 @@ public class MiniNet extends Application {
         LoadRelationships relationships = new LoadRelationships();
         relationships.loadRelations();
         relationships.printRelationships();
+
+        LoadDatabase database = new LoadDatabase();
+        database.loadDatabase();
 
 
         Driver menu = new Driver();
