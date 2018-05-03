@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Array {
+public class Array extends Person{
     //Created by Charles Galea (March 2018)
     static ArrayList<Person> list = new ArrayList<>();
 
     public Array() {
+    }
+
+    public Array(String name, String image, String status, String gender, String age, String state) {
+        super(name, image, status, gender, age, state);
     }
 
     public Array(ArrayList list) {
@@ -42,6 +46,15 @@ public class Array {
             System.out.println(list.get(i) + " ");
             System.out.println();
         }
+    }
+
+    //Add new profile to ArrayList
+    public void addProfile() {
+
+        AddProfiles person = new AddProfiles();
+
+        list.add(new Person(person.getNewName(), person.getNewImage(), person.getNewStatus(), person.getNewGender(), person.getNewAge(), person.getNewState()));
+
     }
 }
 

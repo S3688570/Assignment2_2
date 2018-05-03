@@ -9,7 +9,7 @@ public class AddRelationships extends LoadRelationships{
     //Method to connect two people as friends
     public void addFriend() {
 
-        if (ageOK == true) {
+    /*    if (ageOK == true) {
             for (int i = 0; i < listRelationships.size(); i++) {
                 if (firstFriend.equalsIgnoreCase(list.get(i).getFirstFriend())) {
                     listRelationships.get(i).setFriends(secondFriend);
@@ -22,7 +22,7 @@ public class AddRelationships extends LoadRelationships{
                     System.out.println();
                 }
             }
-        }
+        } */
     }
 
 }

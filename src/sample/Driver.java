@@ -38,13 +38,14 @@ public class Driver {
             switch (option) {
                 //Add a person to the network
                 case 1:
-                    AddProfiles array = new AddProfiles();
-                    array.addName();
-                    array.addImage();
-                    array.addStatus();
-                    array.addGender();
-                    array.addAge();
-                    array.addState();
+                    AddProfiles profile = new AddProfiles();
+                    profile.addName();
+                    profile.addImage();
+                    profile.addStatus();
+                    profile.addGender();
+                    profile.addAge();
+                    profile.addState();
+                    Array array = new Array();
                     array.addProfile();
                     menuOpt.displayMenu();
                     break;

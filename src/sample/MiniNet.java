@@ -35,7 +35,7 @@ public class MiniNet extends Application {
 
 
     public static void main(String[] args) throws Exception {
-        launch(args);
+     //   launch(args);
 
 
         Array array = new Array();
@@ -48,7 +48,6 @@ public class MiniNet extends Application {
 
         LoadDatabase database = new LoadDatabase();
         database.loadDatabase();
-
 
         Driver menu = new Driver();
         menu.displayMenu();

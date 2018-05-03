@@ -18,8 +18,68 @@ public class AddProfiles extends Array {
 
     Scanner input = new Scanner(System.in);
 
+    public AddProfiles(String name, String image, String status, String gender, String age, String state) {
+        super(name, image, status, gender, age, state);
+    }
+
     //Construct default AddProfile object
     public AddProfiles() {
+    }
+
+    public String getNewName() {
+        return newName;
+    }
+
+    public String getNewString() {
+        return newString;
+    }
+
+    public String getNewImage() {
+        return newImage;
+    }
+
+    public String getNewStatus() {
+        return newStatus;
+    }
+
+    public String getNewGender() {
+        return newGender;
+    }
+
+    public String getNewAge() {
+        return newAge;
+    }
+
+    public String getNewState() {
+        return newState;
+    }
+
+    public void setNewName(String newName) {
+        this.newName = newName;
+    }
+
+    public void setNewString(String newString) {
+        this.newString = newString;
+    }
+
+    public void setNewImage(String newImage) {
+        this.newImage = newImage;
+    }
+
+    public void setNewStatus(String newStatus) {
+        this.newStatus = newStatus;
+    }
+
+    public void setNewGender(String newGender) {
+        this.newGender = newGender;
+    }
+
+    public void setNewAge(String newAge) {
+        this.newAge = newAge;
+    }
+
+    public void setNewState(String newState) {
+        this.newState = newState;
     }
 
     //Add person's name
@@ -44,7 +104,7 @@ public class AddProfiles extends Array {
         do {
             System.out.println("Enter the profile image name: ");
             String newImage = input.nextLine();
-            if (!newImage.matches("[a-zA-Z ]+")) {
+            if (!newImage.matches("[a-zA-Z ].+")) {
                 error = true;
                 newString = newImage;
                 throw new MyExceptions("Error message", newString);
@@ -112,6 +172,7 @@ public class AddProfiles extends Array {
         do {
             System.out.println("Enter the person's residence (e.g. VIC): ");
             String newState = input.nextLine();
+            newState = input.nextLine();
             if (!newState.matches("[a-zA-Z ]+")) {
                 error = true;
                 newString = newState;
@@ -121,74 +182,4 @@ public class AddProfiles extends Array {
             }
         } while (error == true);
     }
-
-    public String getNewName() {
-        return newName;
-    }
-
-    public String getNewString() {
-        return newString;
-    }
-
-    public String getNewImage() {
-        return newImage;
-    }
-
-    public String getNewStatus() {
-        return newStatus;
-    }
-
-    public String getNewGender() {
-        return newGender;
-    }
-
-    public String getNewAge() {
-        return newAge;
-    }
-
-    public String getNewState() {
-        return newState;
-    }
-
-    public void setNewName(String newName) {
-        this.newName = newName;
-    }
-
-    public void setNewString(String newString) {
-        this.newString = newString;
-    }
-
-    public void setNewImage(String newImage) {
-        this.newImage = newImage;
-    }
-
-    public void setNewStatus(String newStatus) {
-        this.newStatus = newStatus;
-    }
-
-    public void setNewGender(String newGender) {
-        this.newGender = newGender;
-    }
-
-    public void setNewAge(String newAge) {
-        this.newAge = newAge;
-    }
-
-    public void setNewState(String newState) {
-        this.newState = newState;
-    }
-
-    //Add new profile to ArrayList
-    public void addProfile() {
-
-        list.add(new Person(getNewName(), getNewImage(), getNewStatus(), getNewGender(), getNewAge(), getNewState()));
-
-        //Print new profile
-        for (int i = 0; i < list.size(); i++) {
-            if (getNewName().equalsIgnoreCase(list.get(i).getName()))
-                System.out.println(list.get(i));
-            System.out.println();
-        }
-    }
 }
-
