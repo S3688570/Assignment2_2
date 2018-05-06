@@ -35,7 +35,7 @@ public class MiniNet extends Application {
 
 
     public static void main(String[] args) throws Exception {
-     //   launch(args);
+        launch(args);
 
 
         Array array = new Array();

@@ -39,21 +39,22 @@ public class Driver {
                 //Add a person to the network
                 case 1:
                     AddProfiles profile = new AddProfiles();
-                    profile.addName();
-                    profile.addImage();
-                    profile.addStatus();
-                    profile.addGender();
-                    profile.addAge();
-                    profile.addState();
-                    Array array = new Array();
-                    array.addProfile();
+                    try {
+                        profile.addProfile();
+                    } catch (MyExceptions e) {
+                        System.out.println("Incorrect input");
+                    }
                     menuOpt.displayMenu();
                     break;
 
                 //Select a person by name and print profile
                 case 2:
                     SearchProfiles search = new SearchProfiles();
-                    search.searchName();
+                    try {
+                        search.searchName();
+                    } catch (MyExceptions e) {
+                        System.out.println("Incorrect input");
+                    }
                     menuOpt.displayMenu();
                     break;
 
@@ -82,10 +83,10 @@ public class Driver {
 
                     //Find out the name(s) of a person's child(ren)
                 case 6:
-     /*               FindChildren find = new FindChildren();
+                    FindChildren find = new FindChildren();
                     find.findChild();
                     menuOpt.displayMenu();
-                    break; */
+                    break;
 
                     //Find out the names of a persons parents
                 case 7:

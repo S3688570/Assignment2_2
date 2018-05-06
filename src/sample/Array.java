@@ -48,13 +48,6 @@ public class Array extends Person{
         }
     }
 
-    //Add new profile to ArrayList
-    public void addProfile() {
-
-        AddProfiles person = new AddProfiles();
-
-        list.add(new Person(person.getNewName(), person.getNewImage(), person.getNewStatus(), person.getNewGender(), person.getNewAge(), person.getNewState()));
-
-    }
+//    TODO-me Add method to print single profile
 }
 

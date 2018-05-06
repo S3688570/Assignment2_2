@@ -7,7 +7,6 @@ public class AddProfiles extends Array {
 
     //List variables
     private String newName;
-    private String newString;
     private String newImage;
     private String newStatus;
     private String newGender;
@@ -18,9 +17,6 @@ public class AddProfiles extends Array {
 
     Scanner input = new Scanner(System.in);
 
-    public AddProfiles(String name, String image, String status, String gender, String age, String state) {
-        super(name, image, status, gender, age, state);
-    }
 
     //Construct default AddProfile object
     public AddProfiles() {
@@ -28,10 +24,6 @@ public class AddProfiles extends Array {
 
     public String getNewName() {
         return newName;
-    }
-
-    public String getNewString() {
-        return newString;
     }
 
     public String getNewImage() {
@@ -58,10 +50,6 @@ public class AddProfiles extends Array {
         this.newName = newName;
     }
 
-    public void setNewString(String newString) {
-        this.newString = newString;
-    }
-
     public void setNewImage(String newImage) {
         this.newImage = newImage;
     }
@@ -83,71 +71,62 @@ public class AddProfiles extends Array {
     }
 
     //Add person's name
-    public void addName() throws MyExceptions {
+    public void addProfile() throws MyExceptions {
         boolean error = false;
         do {
             System.out.println("Enter the person's name: ");
-            String newName = input.nextLine();
+            newName = input.nextLine();
             if (!newName.matches("[a-zA-Z ]+")) {
                 error = true;
-                newString = newName;
-                throw new MyExceptions("Error message", newString);
+                throw new MyExceptions("Incorrect input");
             } else {
                 error = false;
             }
         } while (error == true);
-    }
 
-    //Add profile image
-    public void addImage() throws MyExceptions {
-        boolean error = false;
+        //Add profile image
+        error = false;
         do {
             System.out.println("Enter the profile image name: ");
-            String newImage = input.nextLine();
+            newImage = input.nextLine();
             if (!newImage.matches("[a-zA-Z ].+")) {
                 error = true;
-                newString = newImage;
-                throw new MyExceptions("Error message", newString);
+                throw new MyExceptions("Incorrect input");
             } else {
                 error = false;
             }
         } while (error == true);
-    }
 
-    //Input the person's status
-    public void addStatus() throws MyExceptions {
-        boolean error = false;
+
+        //Input the person's status
+        error = false;
         do {
             System.out.println("Enter the person's status: ");
-            String newStatus = input.nextLine();
+            newStatus = input.nextLine();
             if (!newStatus.matches("[a-zA-Z ]+")) {
                 error = true;
-                newString = newStatus;
-                throw new MyExceptions("Error message", newString);
+                throw new MyExceptions("Incorrect input");
             } else {
                 error = false;
             }
         } while (error == true);
-    }
 
-    //Input the person's gender
-    public void addGender() throws MyExceptions {
-        boolean error = false;
+
+        //Input the person's gender
+        error = false;
         do {
             System.out.println("Enter the person's gender: ");
-            String newGender = input.nextLine();
+            newGender = input.nextLine();
             if (!newGender.matches("[a-zA-Z ]+")) {
                 error = true;
-                newString = newGender;
-                throw new MyExceptions("Error message", newString);
+                throw new MyExceptions("Incorrect input");
             } else {
                 error = false;
             }
         } while (error == true);
-    }
 
-    //Input the person's age
-    public void addAge() {
+
+        //Input the person's age
         do {
             System.out.println("What is the person's age: ");
             if (input.hasNext()) {
@@ -164,22 +143,24 @@ public class AddProfiles extends Array {
                 isNumber = false;
             }
         } while (!(isNumber));
-    }
 
-    //Input the person's state of residence
-    public void addState() throws MyExceptions {
-        boolean error = false;
+
+        //Input the person's state of residence
+        error = false;
         do {
             System.out.println("Enter the person's residence (e.g. VIC): ");
-            String newState = input.nextLine();
+            newState = input.nextLine();
             newState = input.nextLine();
             if (!newState.matches("[a-zA-Z ]+")) {
                 error = true;
-                newString = newState;
-                throw new MyExceptions("Error message", newString);
+                throw new MyExceptions("Incorrect input");
             } else {
                 error = false;
             }
         } while (error == true);
+
+        //Add new profile to ArrayList
+        list.add(new Person(newName, newImage, newStatus, newGender, newAge, newState));
+        super.printArray();
     }
 }
