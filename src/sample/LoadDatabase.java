@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class LoadDatabase {
 
-    public void loadDatabase() {
+  /*  public void loadDatabase() {
         Connection con = null;
 
         try {
@@ -23,5 +23,5 @@ public class LoadDatabase {
         }  catch (Exception e) {
             e.printStackTrace(System.out);
         }
-    }
+    }  */
 }

@@ -1,88 +1,113 @@
 package sample;
+
+import javafx.beans.property.SimpleStringProperty;
+
+/**
+ * Model class for a Person
+ * @author Charles Galea
+ */
+
 public class Person {
-    //Created by Charles Galea (March 2018)
 
     //List instance variables
-    private String name;
-    private String image;
-    private String status;
-    private String gender;
-    private String age;
-    private String state;
+    private SimpleStringProperty name;
+    private SimpleStringProperty image;
+    private SimpleStringProperty status;
+    private SimpleStringProperty gender;
+    private SimpleStringProperty age;
+    private SimpleStringProperty state;
 
-    //Construct default Person object
+    /**
+     * Default constructor
+     */
     public Person() {
     }
 
-    //Construct Person object containing specified parameters
+    /**
+     * Constructor for Person object containing specified parameters
+     */
+
     public Person(String name, String image, String status, String gender, String age, String state) {
-        this.name = name;
-        this.image = image;
-        this.status = status;
-        this.gender = gender;
-        this.age = age;
-        this.state = state;
+        this.name = new SimpleStringProperty(name);
+        this.image = new SimpleStringProperty(image);
+        this.status = new SimpleStringProperty(status);
+        this.gender = new SimpleStringProperty(gender);
+        this.age = new SimpleStringProperty(age);
+        this.state = new SimpleStringProperty(state);
     }
 
-    //Return name
     public String getName() {
+        return name.get();
+    }
+
+    public SimpleStringProperty nameProperty() {
         return name;
     }
 
-    //Return image
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
     public String getImage() {
+        return image.get();
+    }
+
+    public SimpleStringProperty imageProperty() {
         return image;
     }
 
-    //Return status
+    public void setImage(String image) {
+        this.image.set(image);
+    }
+
     public String getStatus() {
+        return status.get();
+    }
+
+    public SimpleStringProperty statusProperty() {
         return status;
     }
 
-    //Return gender
+    public void setStatus(String status) {
+        this.status.set(status);
+    }
+
     public String getGender() {
+        return gender.get();
+    }
+
+    public SimpleStringProperty genderProperty() {
         return gender;
     }
 
-    //Return age
+    public void setGender(String gender) {
+        this.gender.set(gender);
+    }
+
     public String getAge() {
+        return age.get();
+    }
+
+    public SimpleStringProperty ageProperty() {
         return age;
     }
 
-    //Return state
+    public void setAge(String age) {
+        this.age.set(age);
+    }
+
     public String getState() {
+        return state.get();
+    }
+
+    public SimpleStringProperty stateProperty() {
         return state;
     }
 
-    //Set new name
-    public void setName(String newName) {
-        this.name = newName;
+    public void setState(String state) {
+        this.state.set(state);
     }
 
-    //Set new image
-    public void setImage(String newImage) {
-        this.image = newImage;
-    }
-
-    //Set new status
-    public void setStatus(String newStatus) {
-        this.status = newStatus;
-    }
-
-    //Set new gender
-    public void setGender(String newGender) {
-        this.gender = newGender;
-    }
-
-    //Set new age
-    public void setAge(String newAge) {
-        this.age = newAge;
-    }
-
-    //Set new age
-    public void setState(String newState) {
-        this.state = newState;
-    }
 
     public String toString() {
         return "\n" + "Name: " + getName() + "\nImage: " + getImage() + "\nStatus: " + getStatus() + "\nGender: " + getGender() + "\nAge: " + getAge() + "\nState: " + getState() + "\n";

@@ -25,11 +25,14 @@ public class MiniNet extends Application {
      * </p>
      */
     //Created by Charles Galea (March 2018)
+
+    public MiniNet() {
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();
     }
 
@@ -46,8 +49,8 @@ public class MiniNet extends Application {
         relationships.loadRelations();
         relationships.printRelationships();
 
-        LoadDatabase database = new LoadDatabase();
-        database.loadDatabase();
+    //    LoadDatabase database = new LoadDatabase();
+     //   database.loadDatabase();
 
         Driver menu = new Driver();
         menu.displayMenu();

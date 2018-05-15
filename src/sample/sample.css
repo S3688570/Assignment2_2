@@ -4,5 +4,8 @@
     -fx-text-fill: #ff3f0a;
     -fx-padding: 4 4 4 4;
     -fx-border-radius: 6;
-} */
+}
 
+.root {
+    -fx-background-color: grey;
+} */
